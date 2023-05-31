@@ -1,25 +1,15 @@
 import React from 'react';
-import alilinkLogo from '../assest/logos/alulink_logo.png';
 import reconnectImg from '../assest/images/reconnect.jpg';
 import collegeGroupImg from '../assest/images/college_group.jpg'
 import toolsImg from '../assest/images/tools.jpg';
 import featureWebP from '../assest/images/feature-5.webp'
+import Navbar from '../component/navbar/navbar';
 
 const Home = () => {
   return (
     <div className='Home'>
       {/* Navbar */}
-      <div className='flex text-white navbar bg-gray-800 justify-between h-18'>
-        <img src={alilinkLogo} className='h-16 sm:h-24 mt-2' alt='alulink logo' />
-        <div className='font-bold flex mt-1'>
-          <button className="border-2  mt-6 border-white rounded-2xl w-24 sm:w-32 h-10 sm:h-12 mr-4 sm:mr-8 border-1 transition duration-300 hover:border-gray-600 hover:border-3">
-            Login
-          </button>
-          <button className="border-2 mr-14 mt-6 border-white rounded-2xl w-24 sm:w-32 h-10 sm:h-12 border-1 transition duration-300 hover:border-gray-600 hover:border-3">
-            Sign up free
-          </button>
-        </div>
-      </div>
+      <Navbar/>
 
       {/* Home Page */}
       <div>
@@ -73,18 +63,6 @@ const Home = () => {
             <img className='w-96' src={toolsImg} alt='student meetup' />
           </div>
         </div>
-
-
-        {/* <div className='mt-10 flex justify-around w-full flex-wrap container-a'>
-          <div className='flex flex-col items-center justify-center text-5xl container-text'>
-            <div>Save Hours spent on</div>
-            <div>managing multiple tools</div>
-          </div>
-          <div>
-            <img w-26 src={toolsImg} alt='tools' />
-          </div>
-        </div> */}
-
 
 
         <div className='mt-10 flex justify-around w-full flex-wrap container-a'>
@@ -198,8 +176,6 @@ const Home = () => {
           </div>
         </div>
       </footer>
-
-
 
 
     </div >
