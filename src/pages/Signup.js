@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../component/navbar/navbar'
+import Profile from './Profile'
 import { organizationType } from '../static/data'
 import { useDispatch } from 'react-redux'
 import { register } from '../redux/actions/organizationActions';
@@ -142,6 +143,8 @@ const Signup = () => {
 
                 </form>
             </div>
+
+            <Profile/>
 
         </div>
     )
