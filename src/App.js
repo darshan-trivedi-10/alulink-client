@@ -6,14 +6,14 @@ import Profile from './pages/Profile';
 import { useSelector } from 'react-redux';
 
 function App() {
-  const user = useSelector((state) => (state.organizationReducer.organizationData?.success === true))
+  const isLogged = useSelector((state) => (state.organizationReducer.organizationData?.success === true))
   return (
     <>
       <Router>
         <Routes>
-          <Route path='/' exact element={user ? <Navigate to="/profile/dbt" /> : <Home />} />
+          <Route path='/' exact element={isLogged ? <Navigate to="/profile/dbt" /> : <Home />} />
           <Route path='/signup' exact element={[<Signup />]} />
-          <Route path='/profile/:username' element={user ? <Profile /> : <Navigate to="/" />} />
+          <Route path='/profile/:username' element={isLogged ? <Profile /> : <Navigate to="/" />} />
         </Routes>
       </Router>
     </>
