@@ -3,8 +3,8 @@ import reconnectImg from '../assest/images/reconnect.jpg';
 import collegeGroupImg from '../assest/images/college_group.jpg'
 import toolsImg from '../assest/images/tools.jpg';
 import featureWebP from '../assest/images/feature-5.webp'
-import Navbar from '../component/navbar/navbar';
-import Footer from '../component/navbar/footer';
+import Navbar from '../component/navbar/Navbar';
+import Footer from '../component/footer/Footer';
 
 const Home = () => {
   return (

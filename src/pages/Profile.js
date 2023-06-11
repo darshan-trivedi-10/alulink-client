@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import Navbar from '../component/navbar/navbar';
+import Navbar from '../component/navbar/Navbar';
 
 export default function Profile() {
     const user = {
