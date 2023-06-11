@@ -143,9 +143,7 @@ const Signup = () => {
 
                 </form>
             </div>
-
-            <Profile/>
-
+            
         </div>
     )
 }
