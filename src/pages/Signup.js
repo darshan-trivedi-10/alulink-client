@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Navbar from '../component/navbar/navbar'
+import Navbar from '../component/navbar/Navbar'
 import Profile from './Profile'
 import { organizationType } from '../static/data'
 import { useDispatch } from 'react-redux'
