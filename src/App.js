@@ -11,9 +11,9 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' exact element={isLogged ? <Navigate to="/profile/dbt" /> : <Home />} />
+          <Route path='/' exact element={isLogged ? <Navigate to="/organization/dbt" /> : <Home />} />
           <Route path='/signup' exact element={[<Signup />]} />
-          <Route path='/profile/:username' element={isLogged ? <Profile /> : <Navigate to="/" />} />
+          <Route path='/organization/:username' element={isLogged ? <Profile /> : <Navigate to="/" />} />
         </Routes>
       </Router>
     </>
