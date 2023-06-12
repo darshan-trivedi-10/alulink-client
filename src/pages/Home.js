@@ -3,7 +3,7 @@ import reconnectImg from '../assest/images/reconnect.jpg';
 import collegeGroupImg from '../assest/images/college_group.jpg'
 import toolsImg from '../assest/images/tools.jpg';
 import featureWebP from '../assest/images/feature-5.webp'
-import Navbar from '../component/navbar/Navbar';
+import Navbar from '../component/navbar/Navbar.js';
 import Footer from '../component/footer/Footer';
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
       {/* Home Page */}
       <div>
         <div className='flex justify-around w-full flex-wrap container-a'>
-          <div className='flex flex-col items-center justify-center text-5xl container-text'>
+          <div className='relative flex flex-col items-center justify-center text-5xl container-text'>
             <div>Reconnect with all</div>
             <div>your senior <b>&</b> classmates</div>
             <div>in one convenient place</div>

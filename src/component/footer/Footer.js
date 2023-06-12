@@ -5,8 +5,8 @@ export default function Footer() {
     <div>
       <footer className="mt-10 bg-white dark:bg-gray-900">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-            <div>
+          <div className="grid grid-cols-2 gap-15 px-4 py-6 lg:py-8 md:grid-cols-4">
+            <div className="mt-24">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 AluLink
               </h2>
@@ -33,7 +33,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="mt-24">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Help center
               </h2>
@@ -60,7 +60,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="mt-24">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Legal
               </h2>
@@ -82,7 +82,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="mt-24">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Download
               </h2>
@@ -110,7 +110,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+          <div className="px-4 py-6  md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
               © 2023 <a href="https://flowbite.com/">AluLink™</a>. All Rights
               Reserved.
@@ -245,8 +245,8 @@ export default function Footer() {
             ></path>
             <text></text>
           </svg>
-          <div className="absolute inset-0 overflow-hidden absolute top-0 left-0 z-0">
-            <h1 className="mt-[3vh] text-[32vw] overflow-hidden text-center text-white">alulink</h1>
+          <div className="absolute inset-0 overflow-hidden absolute top-5 left-0 z-0">
+            <h1 className="mt-[3vh] text-[32vw] overflow-hidden text-center text-customColor">alulink</h1>
           </div>
         </div>
       </footer>
