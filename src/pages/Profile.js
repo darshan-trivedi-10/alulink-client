@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../component/navbar/Navbar';
+import Overview from '../component/organization/Overview';
 
 export default function Profile() {
     const user = {
@@ -136,8 +137,8 @@ export default function Profile() {
 
                     </ul>
                 </div>
-
             </div>
+            <Overview description={user.data.user.description} />
         </>
     )
 }
