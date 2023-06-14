@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home'
 import Signup from './pages/Signup'
@@ -6,13 +6,14 @@ import Profile from './pages/Profile';
 import { useSelector } from 'react-redux';
 
 function App() {
-  const isLogged = useSelector((state) => (state.organizationReducer.organizationData?.success === true))
+  const [isLogged, setIsLogged] = useState(useSelector((state) => (state.organizationReducer.organizationData?.success === true)));
+  console.log(isLogged);
   return (
     <>
       <Router>
         <Routes>
           <Route path='/' exact element={isLogged ? <Navigate to="/organization/dbt" /> : <Home />} />
-          <Route path='/signup' exact element={[<Signup />]} />
+          <Route path='/signup' exact element={isLogged ? <Navigate to="/organization/dbt" /> : <Signup />}  />
           <Route path='/organization/:username' element={isLogged ? <Profile /> : <Navigate to="/" />} />
         </Routes>
       </Router>
