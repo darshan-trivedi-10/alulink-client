@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Select from 'react-select';
+import { searchOrganization } from '../../api/organizationApi'
 
 const customStyles = {
     control: (provided) => ({
@@ -35,24 +36,19 @@ const customStyles = {
 
 function UserSignup() {
 
-    const [selectedOptions, setSelectedOptions] = useState();
-    const optionList = [];
+    const [selectedOptions, setSelectedOptions] = useState(null);
+    const [optionList, setOptionList] = useState([]);
+    const [timing, setTiming] = useState([]);
 
 
     const [formData, setFormData] = useState({
         name: '',
-        location: '',
-        established: '',
         phoneNumber: '',
         email: '',
-        logo: "",
-        description: '',
-        programType: '',
-        adminName: '',
-        adminEmail: '',
-        adminPassword: '',
-        adminPhone: '',
-        website: '',
+        headline: '',
+        college: "",
+        startYear: 0,
+        graductionYear: 0
     });
 
     const handleChange = (e) => {
@@ -60,40 +56,51 @@ function UserSignup() {
         setFormData({ ...formData, [id]: value });
     };
 
-    const handleLogoChange = (e) => {
-        setFormData({ ...formData, logo: e.target.files[0] });
-    };
-
-    const registerOrganization = (e) => {
+    const registerUser = (e) => {
         e.preventDefault();
 
-        let organizationData = {
+        const userData = {
             name: formData.name,
-            location: formData.location,
-            established: formData.established,
-            website: formData.website,
-            phoneNumber: formData.phoneNumber,
             email: formData.email,
-            logo: formData.logo,
-            description: formData.description,
-            programType: formData.programType,
-            admin: {
-                name: formData.adminName,
-                email: formData.adminEmail,
-                password: formData.adminPassword,
-                phone: formData.adminPhone,
-            },
+            password: formData.password,
+            dataOfBirth: formData.dataOfBirth,
+            headline: formData.headline,
+            phoneNumber: formData.phoneNumber,
+            colleges: {
+                college: formData.college,
+                startYear: formData.startYear,
+                graduationYear: formData.graductionYear,
+            }
         };
-        // dispatch(register(organizationData));
+
+        console.log(userData);
     };
 
     function handleSelect(data) {
-        console.log(data);
+
+        setFormData({ ...formData, college: data.value })
         setSelectedOptions(data);
+
+        const startDate = new Date(data.established);
+        const currentYear = new Date().getFullYear();
+        const yearsArray = [];
+
+
+        for (let year = startDate.getFullYear(); year <= currentYear + 10; year++) {
+            yearsArray.push(year);
+        }
+
+        setTiming(yearsArray);
+
     }
 
-    const SeachColleges = (inputValue) => {
-        
+    const updateOrganizationList = async (inputValue) => {
+        let organizationList = await searchOrganization(inputValue);
+        setOptionList(organizationList);
+    };
+
+    const FindOrganization = (inputValue) => {
+        updateOrganizationList(inputValue);
     };
 
     return (
@@ -101,7 +108,7 @@ function UserSignup() {
             <h1 className='text-center mt-10 text-white text-3xl'>Join Your College/University Group On AliLink </h1>
             <div className='pb-20 w-100 h-100 mt-10 bg-gray-900 flex item-center justify-center'>
 
-                <form onSubmit={registerOrganization}>
+                <form onSubmit={registerUser}>
 
                     <div className="flex flex-col mb-6 space-y-6 md:flex-row md:space-y-0 md:space-x-6">
                         <div className="mb-6">
@@ -140,7 +147,7 @@ function UserSignup() {
                             value={selectedOptions}
                             onChange={handleSelect}
                             isSearchable={true}
-                            onInputChange={SeachColleges}
+                            onInputChange={FindOrganization}
                             styles={customStyles}
                         />
                     </div>
@@ -150,24 +157,24 @@ function UserSignup() {
 
                         <div className="mb-6 w-full">
                             <label htmlFor="startYear" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Start Year</label>
-                            <select value={formData.programType} onChange={handleChange} id="programType" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                            <select value={formData.startYear} onChange={handleChange} id="startYear" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
                                 <option value="">Start Year</option>
                                 {
-                                    // organizationType?.map((type, index) => {
-                                    // return <option value={type}>{type}</option>
-                                    // })
+                                    timing?.map((type, index) => {
+                                        return <option value={type}>{type}</option>
+                                    })
                                 }
                             </select>
                         </div>
 
                         <div className="mb-6 w-full">
-                            <label htmlFor="startYear" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Graduction Year</label>
-                            <select value={formData.programType} onChange={handleChange} id="programType" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                            <label htmlFor="graductionYear" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Graduction Year</label>
+                            <select value={formData.graductionYear} onChange={handleChange} id="graductionYear" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
                                 <option value=""> Graduction Year</option>
                                 {
-                                    // organizationType?.map((type, index) => {
-                                    // return <option value={type}>{type}</option>
-                                    // })
+                                    timing?.map((type, index) => {
+                                        return <option value={type}>{type}</option>
+                                    })
                                 }
                             </select>
                         </div>
