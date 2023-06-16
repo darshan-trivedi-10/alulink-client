@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../component/navbar/Navbar';
-import Overview from '../component/organization/Overview';
+import Navbar from '../../component/navbar/Navbar';
+import Overview from '../../component/organization/Overview';
 
-export default function Profile() {
+export default function OrganizationProfile() {
     const user = {
         "data": {
             "user": {
