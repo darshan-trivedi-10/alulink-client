@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import OrganizationProfile from './pages/Profile/organizationProfile';
 import UserProfile from './pages/Profile/userProfile';
+import Feed from './pages/Feed';
 
 function App() {
   const organizationData = useSelector((state) => state.organizationReducer.organizationData);
@@ -27,6 +28,7 @@ function App() {
             path="/user/:username"
             element={isUserLogged ? <UserProfile /> : <Navigate to="/" />}
           />
+          <Route path='/feed' element={<Feed />} />
         </Routes>
       </Router>
     </>
@@ -59,7 +61,7 @@ export default App;
 //       "_id": "6480916991192bb955f95d10",
 //       "__v": 0
 //     },
-//     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODA5MTY5OTExOTJiYjk1NWY5NWQxMCIsImlhdCI6MTY4NjE0NzQzNCwiZXhwIjoxNjg4NzM5NDM0fQ.r58-Ru9KKPd1iN9iWFRMOWEdu9idbYf_3rLcdmPqfAQ"
+//     "token": "eyJhbGciOiJIUzI1NifIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODSA5MTY5OTExOTJiYjk1NWY5NWQxMCIsImlhdCfI6MTY4NjE0NzQzNCwiZXhwIjoxNjg4NzM5NDM0fQ.r58-Ru9KKPd1iN9iWFRMOWEdu9idbYf_3rLcdmPqfAQ"
 //   },
 //   "success": true,
 //   "err": {}
