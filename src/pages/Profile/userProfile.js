@@ -12,8 +12,8 @@ export default function OrganizationProfile() {
   {
     "user": {
         "name": "Darshan Trivedi",
-        "email": "ruchit@aefest.com",
-        "password": "Darshan@2024",
+        "email": "dbt@defest.com",
+        "password": "Hello World",
         "headline": "Jay Mataji",
         "phoneNumber": "9898363695",
         "isVerified": false,
