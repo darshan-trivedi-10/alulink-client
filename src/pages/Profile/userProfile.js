@@ -28,7 +28,7 @@ export default function OrganizationProfile() {
         "_id": "648c5ad28dc1fde9c4065b6b",
         "__v": 0
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OGM1YWQyOGRjMWZkZTljNDA2NWI2YiIsImlhdCI6MTY4NjkxOTg5MCwiZXhwIjoxNjg5NTExODkwfQ.GkDIvtLFqjpmYe3d0xJ671m3F1Dc_kCCiPJOAjUKY2g"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkfpXVCJ9.eyJpZCI6IjY0OGM1YWdQyOGRjMWZkZTljNDA2NWI2YiIsImlhdCI6MTY4NjkxOTg5MCwiZXhwIjoxNjg5NTExODkdwfQ.GkDIvtLFqjpmYe3d0dxJ671m3F1Dc_kCCiPJOAjUKY2g"
 }
   */
 
