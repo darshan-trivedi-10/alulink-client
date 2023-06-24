@@ -3,8 +3,8 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      <footer className="mt-10 bg-white dark:bg-gray-900">
-        <div className="mx-auto w-full max-w-screen-xl">
+      <footer className="mt-10 bgWhite dark:bg-gray-900">
+        <div className="mx-auto w-full maxW-screen-xl">
           <div className="grid grid-cols-2 gap-15 px-4 py-6 lg:py-8 md:grid-cols-4">
             <div className="mt-24">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
@@ -224,7 +224,7 @@ export default function Footer() {
             <path
               d="M 0,600 C 0,600 0,200 0,200 C 72.10526315789474,232.70813397129186 144.21052631578948,265.4162679425837 239,271 C 333.7894736842105,276.5837320574163 451.2631578947369,255.0430622009569 559,256 C 666.7368421052631,256.9569377990431 764.7368421052631,280.41148325358853 865,254 C 965.2631578947369,227.58851674641147 1067.7894736842106,151.31100478468898 1164,134 C 1260.2105263157894,116.68899521531101 1350.1052631578946,158.3444976076555 1440,200 C 1440,200 1440,600 1440,600 Z"
               stroke="none"
-              stroke-width="0"
+              strokeWidth="0"
               fill="url(#gradient)"
               fill-opacity="0.53"
               className="transition-all duration-300 ease-in-out delay-150 path-0"
@@ -238,7 +238,7 @@ export default function Footer() {
             <path
               d="M 0,600 C 0,600 0,400 0,400 C 102.89952153110048,368.6602870813397 205.79904306220095,337.3205741626794 311,344 C 416.20095693779905,350.6794258373206 523.7033492822967,395.37799043062205 601,405 C 678.2966507177033,414.62200956937795 725.3875598086125,389.1674641148325 812,385 C 898.6124401913875,380.8325358851675 1024.7464114832535,397.95215311004785 1136,404 C 1247.2535885167465,410.04784688995215 1343.6267942583731,405.02392344497605 1440,400 C 1440,400 1440,600 1440,600 Z"
               stroke="none"
-              stroke-width="0"
+              strokeWidth="0"
               fill="url(#gradient)"
               fill-opacity="1"
               className="transition-all duration-300 ease-in-out delay-150 path-1"

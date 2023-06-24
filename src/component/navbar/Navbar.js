@@ -35,9 +35,9 @@ export default function Navbar() {
           <div className="mt-6 w-12 mr-4 sm:mr-8 transition duration-300  hover:border-3">
             <Link to="/user/profile">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z" fill="currentColor" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z" fill="currentColor" stroke="#212121" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 </path>
-                <path d="M4.27148 18.346C4.27148 18.346 6.50048 15.5 12.0005 15.5C17.5005 15.5 19.7305 18.346 19.7305 18.346M12.0005 12C12.7961 12 13.5592 11.6839 14.1218 11.1213C14.6844 10.5587 15.0005 9.79565 15.0005 9C15.0005 8.20435 14.6844 7.44129 14.1218 6.87868C13.5592 6.31607 12.7961 6 12.0005 6C11.2048 6 10.4418 6.31607 9.87916 6.87868C9.31655 7.44129 9.00048 8.20435 9.00048 9C9.00048 9.79565 9.31655 10.5587 9.87916 11.1213C10.4418 11.6839 11.2048 12 12.0005 12V12Z" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.27148 18.346C4.27148 18.346 6.50048 15.5 12.0005 15.5C17.5005 15.5 19.7305 18.346 19.7305 18.346M12.0005 12C12.7961 12 13.5592 11.6839 14.1218 11.1213C14.6844 10.5587 15.0005 9.79565 15.0005 9C15.0005 8.20435 14.6844 7.44129 14.1218 6.87868C13.5592 6.31607 12.7961 6 12.0005 6C11.2048 6 10.4418 6.31607 9.87916 6.87868C9.31655 7.44129 9.00048 8.20435 9.00048 9C9.00048 9.79565 9.31655 10.5587 9.87916 11.1213C10.4418 11.6839 11.2048 12 12.0005 12V12Z" stroke="#212121" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 </path>
               </svg>
             </Link>
@@ -61,7 +61,7 @@ export default function Navbar() {
       )}
 
       {showModal && (
-        <div className=" bg-gray-800 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+        <div className="bg-gray-800 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
           <button
             className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-400"
             onClick={() => isShowModal(false)}
@@ -84,7 +84,7 @@ export default function Navbar() {
           </button>
 
           <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+            <div className="w-full bg-white roundedLg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
               <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Sign in to your account
@@ -101,7 +101,7 @@ export default function Navbar() {
                       type="email"
                       name="email"
                       id="email"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm roundedLg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="name@company.com"
                       required=""
                     />
@@ -118,7 +118,7 @@ export default function Navbar() {
                       name="password"
                       id="password"
                       placeholder="••••••••"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm roundedLg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       required=""
                     />
                   </div>
@@ -150,14 +150,14 @@ export default function Navbar() {
                     </a>
                   </div>
 
-                  <div class="flex justify-center items-center">
+                  <div className="flex justify-center items-center">
 
-                    <div class="relative inline-flex  group">
-                      <div class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#808080] via-[#808080] to-[#808080] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+                    <div className="relative inline-flex  group">
+                      <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#808080] via-[#808080] to-[#808080] rounded-xl blurLg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
                       <a
-                        href="#"
+                        href="/"
                         title="Get quote now"
-                        class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-800 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                        className="relative inline-flex items-center justify-center px-8 py-4 textLg font-bold text-white transition-all duration-200 bg-gray-800 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                         role="button"
                       >
                         <img
@@ -172,7 +172,7 @@ export default function Navbar() {
                   </div>
 
                   {/* <div className="flex flex-row space-between">
-                    <button className="border border-slate-200 rounded-lg text-white-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150 flex justify-center items-center bg-gray">
+                    <button className="border border-slate-200 roundedLg text-white-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150 flex justify-center items-center bg-gray">
                       <img
                         className="w-12 h-6"
                         src="https://www.svgrepo.com/show/475656/google-color.svg"
@@ -183,7 +183,7 @@ export default function Navbar() {
                     </button>
                   </div> */}
 
-                  <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                  <p className="text-sm fontLight text-gray-500 dark:text-gray-400">
                     Don't have an account yet?{' '}
                     <Link
                       to="/signup"
