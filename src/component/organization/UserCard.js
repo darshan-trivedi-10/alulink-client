@@ -3,9 +3,11 @@ import { verifyUser } from '../../api/userApi';
 
 function UserCard({ user, removeUser }) {
 
-    const verify = async () => {
+    const verify = async (shouldVerify) => {
+        console.log(shouldVerify);
         const data = await verifyUser({
-            id: user._id
+            id: user._id,
+            verify: false
         })
         if (data.data.data.data === true) {
             removeUser(user._id);
@@ -41,7 +43,12 @@ function UserCard({ user, removeUser }) {
                 {removeUser && <div className="absolute flex flex-col top-4 right-4">
                     <div className="mb-1">
                         <div>
-                            <button className="bg-gray-800 border font-medium text-center tracking-wide transition-all ease-in duration-75 disabled:opacity-50 disabled:cursor-not-allowed flex items-center leading-120 select-none rounded text-xs h-6 px-3 bg-gray text-white border-gray-gray9 hover:bg-gray-gray8  " type="button" id="follow-profile" onClick={verify}>Verify User</button>
+                            <button className="bg-gray-800 border font-medium text-center tracking-wide transition-all ease-in duration-75 disabled:opacity-50 disabled:cursor-not-allowed flex items-center leading-120 select-none rounded text-xs h-6 px-3 bg-gray text-white border-gray-gray9 hover:bg-gray-gray8  " type="button" id="follow-profile" onClick={() => { verify(true) }}>Verify User</button>
+                        </div>
+                    </div>
+                    <div className="mb-1">
+                        <div>
+                            <button className="bg-gray-800 border font-medium text-center tracking-wide transition-all ease-in duration-75 disabled:opacity-50 disabled:cursor-not-allowed flex items-center leading-120 select-none rounded text-xs h-6 px-3 bg-gray text-white border-gray-gray9 hover:bg-gray-gray8  " type="button" id="follow-profile" onClick={() => (verify(false))}>Remove User</button>
                         </div>
                     </div>
                 </div>}

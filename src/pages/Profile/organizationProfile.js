@@ -96,21 +96,13 @@ export default function OrganizationProfile() {
                     </div>
                 </div>
                 <div className="bgWhite w-full border-b border-primaryBorder px-4 sm:px-6 ">
-                    <ul className="items-center grid grid-cols-4 w-full">
+                    <ul className="items-center grid grid-cols-3 w-full">
                         <button onClick={() => handleComponentChange('overview')}>
                             <li className='border border-primaryBorder'>
                                 <p className="text-sm font-medium text-center block py-3 w-full text-primary">
                                     Overview
                                 </p>
                                 <div style={{ height: "2px" }} className=" w-full roundedLg bg-primary"></div>
-                            </li>
-                        </button>
-                        <button>
-                            <li className='border border-primaryBorder'>
-                                <p className="text-sm font-medium text-center block py-3 w-full text-gray" >
-                                    Careers
-                                </p>
-                                <div style={{ height: "2px" }} className=" w-full roundedLg bg-transparent"></div>
                             </li>
                         </button>
                         <button onClick={() => handleComponentChange('people')}>

@@ -127,8 +127,8 @@
       <path fill="#fff" d="M307 241h28v28h-28z"/>
     </clipPath>
     <linearGradient id="j" x1="114.5" x2="114.5" y1="358.08" y2="327.55" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#20B038"/>
-      <stop offset="1" stop-color="#60D66A"/>
+      <stop stopColor="#20B038"/>
+      <stop offset="1" stopColor="#60D66A"/>
     </linearGradient>
   </defs>
 </svg>

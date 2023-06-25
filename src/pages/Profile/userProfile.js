@@ -66,19 +66,19 @@ export default function OrganizationProfile() {
           </div>
         </div>
         <div className="bgWhite w-full border-b border-primaryBorder px-4 sm:px-6 ">
-          <ul className="items-center grid grid-cols-2 w-full">
+          <ul className="items-center grid grid-cols-1 w-full">
             <li className='border border-primaryBorder'>
               <a className="text-sm font-medium text-center block py-3 w-full text-primary" href="/">
                 Your Posts
               </a>
               <div style={{ height: "2px" }} className=" w-full roundedLg bg-primary"></div>
             </li>
-            <li className='border border-primaryBorder'>
+            {/* <li className='border border-primaryBorder'>
               <a className="text-sm font-medium text-center block py-3 w-full text-gray" href="/">
                 Jobs Application
               </a>
               <div style={{ height: "2px" }} className=" w-full roundedLg bg-transparent"></div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
