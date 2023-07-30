@@ -17,6 +17,7 @@ function Request() {
             } catch (error) {
                 console.error('Error fetching unverified user:', error);
             }
+
         };
 
         fetchUnverifiedUser();
@@ -28,7 +29,7 @@ function Request() {
     }
 
     return (
-        <div className='w-full flex-row flex justify-center'>
+        <div className='w-full flex-row flex justify-center'> 
             <div className='flex flex-wrap justify-center'>
                 {
                     unverifiedUser.map((user) => (

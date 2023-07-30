@@ -116,7 +116,7 @@ export default function OrganizationProfile() {
                         <button onClick={() => handleComponentChange('request')}>
                             <li className='border border-primaryBorder'>
                                 <p className="text-sm font-medium text-center block py-3 w-full text-gray" href="/">
-                                    Request
+                                    Request 
                                 </p>
                                 <div style={{ height: "2px" }} className=" w-full roundedLg bg-transparent"></div>
                             </li>

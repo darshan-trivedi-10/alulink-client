@@ -9,6 +9,9 @@ const userReducer = (
             return { ...state, userData: action.data, loading: false, error: false };
         case "USER_REGISTRATION_FAIL":
             return { ...state, loading: false, error: true };
+        case "UPDATE_USER_DATA":
+            console.log(action.payload);
+            return {...state, userData: action.payload};
         default:
             return state;
     }
