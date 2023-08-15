@@ -10,7 +10,7 @@ export const createPost = async (postData) => {
     } catch (error) {
         if (error.response && error.response.status === 401) {
             console.log('Unauthorized access');
-            // Display an error message to the user or perform any other necessary actions
+            alert("You are not verified User");
         } else {
             console.log('An error occurred');
             // Handle other types of errors

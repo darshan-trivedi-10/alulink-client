@@ -97,10 +97,10 @@ function PostModal(props) {
                                                 <div className="mt-[150px] flex items-center justify-between py-2 border-t border-primaryBorder">
                                                     <div className="flex items-center gap-2">
                                                         <div className="__react_component_tooltip t20c7c1c4-4392-488a-b216-cc20058e7c33 place-top type-dark" id="add-image" aria-haspopup="true" data-id="tooltip">
-                                                            <div className="relative w-fit px-2 py-1 z-10 flex-col items-center text-center justify-center">
+                                                            {/* <div className="relative w-fit px-2 py-1 z-10 flex-col items-center text-center justify-center">
                                                                 <p className="text-xxs font-normal trackingWider " id="tooltip-text">Add Image</p>
                                                                 <div className="absolute tooltip-arrow-down mx-auto -bottom-2 left-1/2 -translate-x-1/2"></div>
-                                                            </div>
+                                                            </div> */}
                                                         </div>
                                                     </div>
                                                     <div onClick={createpost} className="flex items-center gap-2 sm:gap-4"><button className="border font-medium text-center trackingWide transition-all ease-in duration-75 disabled:opacity-50 disabled:cursor-not-allowed flex items-center leading-120 select-none rounded text-xs h-6 px-3 bg-green-bright text-white border-green-dark border-2 hover:bg-green-dark ml-auto " type="button">Post</button></div>
@@ -234,31 +234,3 @@ function PostModal(props) {
 }
 
 export default PostModal;
-
-
-/*
-
-import React, { useState } from 'react';
-
-const PostForm = () => {
-    const [companyName, setCompanyName] = useState('');
-    const [jobTitle, setJobTitle] = useState('');
-    const [openingLink, setOpeningLink] = useState('');
-
-    const handlePostClick = () => {
-        // Process the data here or perform any desired actions
-        console.log('Company Name:', companyName);
-        console.log('Job Title:', jobTitle);
-        console.log('Opening Link:', openingLink);
-    };
-
-    return (
-        {!isJobPost && (
-            
-        )
-}
-  );
-};
-
-
-*/

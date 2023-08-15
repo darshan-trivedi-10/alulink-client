@@ -16,17 +16,22 @@ export default function OrganizationProfile() {
       return;
     }
 
+    const fileExtension = file.name.split(".").pop(); // Get the file extension
+    const newFilename = `${userData.user._id}.${fileExtension}`;
+    if(fileExtension !== "jpg"){
+      alert("We Only Support JPG Format Image");
+      return;
+    }
+
     const formData = new FormData();
-    formData.append("files", file);
+    formData.append("files", file, newFilename);
     formData.append("id", userData.user._id);
+
     let response = await updateProfile(formData);
     dispatch(updateUserData(response.data));
     console.log(response);
   };
-  // userReducer.userData.data.user
-
-  // console.log(userData.user.data = response.data);
-  // console.log(imageURL + userData.user.profile);
+  console.log(imageURL + userData.user.profile);
 
   return (
     <>

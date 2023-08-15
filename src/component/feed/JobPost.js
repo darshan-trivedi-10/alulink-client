@@ -1,4 +1,5 @@
 import React from 'react'
+import { imageURL } from '../../static/data';
 
 function JobPost({ post }) {
 
@@ -40,7 +41,7 @@ function JobPost({ post }) {
                       </defs>
                     </svg>
                     <div className="w-10 h-10 rounded-full overflow-hidden">
-                      <img className="w-10 h-10 rounded-full bg-center bg-no-repeat bg-cover bgWhite flex justify-center items-center object-cover hover:opacity-90 transition-opacity border-1 borderWhite rounded-full" src="https://dqy38fnwh4fqs.cloudfront.net/UHA9BO68BL6LRNA2R9MD686DLDGE/ha9bo68bl6lrna2r9md686dldge-profile.webp" alt="Yogini Bende" width="40" height="40" />
+                      <img className="w-10 h-10 rounded-full bg-center bg-no-repeat bg-cover bgWhite flex justify-center items-center object-cover hover:opacity-90 transition-opacity border-1 borderWhite rounded-full" src={imageURL + `${post.owner}.jpg`} alt={post.ownerName} width="40" height="40" />
                     </div>
                   </div>
                 </div>
@@ -59,14 +60,14 @@ function JobPost({ post }) {
             <div role="none">
               <div className="relative ">
                 <div role="none">
-                  <button className="border font-medium text-center trackingWide transition-all ease-in duration-75 disabled:opacity-50 disabled:cursor-not-allowed flex items-center leading-120 select-none rounded-full justify-center text-xs h-6 w-6 bgWhite text-primary border-gray-gray3 hover:bg-gray-gray1 border-0 " type="button">
+                  {/* <button className="border font-medium text-center trackingWide transition-all ease-in duration-75 disabled:opacity-50 disabled:cursor-not-allowed flex items-center leading-120 select-none rounded-full justify-center text-xs h-6 w-6 bgWhite text-primary border-gray-gray3 hover:bg-gray-gray1 border-0 " type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-dots-vertical" width="14" height="14" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <circle cx="12" cy="12" r="1"></circle>
                       <circle cx="12" cy="19" r="1"></circle>
                       <circle cx="12" cy="5" r="1"></circle>
                     </svg>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -101,7 +102,7 @@ function JobPost({ post }) {
           </div>
         </div>
       </div>
-      <div className="mt-4 w-full pl-12">
+      {/* <div className="mt-4 w-full pl-12">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-6">
             <button title="Upvote" type="button" className="flex items-center text-xs group relative pr-8">
@@ -130,7 +131,7 @@ function JobPost({ post }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </article>
   )
 }
